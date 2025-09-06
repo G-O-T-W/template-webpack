@@ -3,7 +3,7 @@
  * Link: https://www.joshwcomeau.com/css/custom-css-reset/
  * Note: Use all: revert; to use original browser default 
  */
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import '../node_modules/modern-normalize/modern-normalize.css';
 
 :root {
   line-height: 1.5;

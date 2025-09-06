@@ -1,20 +1,20 @@
 // webpack.config.js
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: "./src/index.js"
+    app: './src/index.js',
   },
   output: {
-       filename: "main.js",
-       path: path.resolve(__dirname, "dist"),
-       clean: true,
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   plugins: [
     // Handling HTML
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
   module: {
@@ -22,17 +22,17 @@ module.exports = {
       {
         // Loading CSS
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         // Image files we reference in our HTML template
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         // Images we use in our JavaScript, where we will need to import the files
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
