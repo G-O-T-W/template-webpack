@@ -4,7 +4,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   mode: 'development',
   // Webpack dev server
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   devServer: {
     watchFiles: ['src/index.html'],
   },
